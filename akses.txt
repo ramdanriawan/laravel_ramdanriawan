@@ -1,0 +1,95 @@
+#scodepro
+https://www.labtik.com/data/data/web/lisen?id=@zuki!.html
+https://srv67.niagahoster.com:2083/
+u: u6853459
+p: 4e56G&H*J(76542#$e5f67g%^&*6543d56f7g+_)()
+
+#php.id
+https://www.php.id/users/upgrade_packagenya?id=Ankun
+https://iix900.idcloudhost.com:2083/
+u: phpid
+p: .s!CH;y9u_GetLzH4N&yt$%^%Fg7H*IJ(
+
+#watsap.id
+login admin: https://panel.watsap.id/auth
+email : admin@gmail.com
+pass: Zuki1202145
+Cpanel : https://panel.watsap.id:2083
+u: watsap
+p: 7#1QF?HzXm)7
+
+#Dataseo.co.id
+login admin : https://www.dataseo.co.id/login.html
+email : admin@dataseo.co.id
+pass : Zuki1202145
+Cpanel : https://www.dataseo.co.id:2083/
+u: dataseoc
+p: 7#1QF?HzXm)7
+
+#jasatraffic
+login admin : https://app.jasatraffic.com/login
+email: admin@admin.com
+pass: secret
+Cpanel :https://app.jasatraffic.com:2083/
+u: appjasatraffic
+p: 7#1QF?HzXm)7
+
+#spinartikel
+login admin: https://app.spinartikel.com/
+email : admin@spinartikel.com
+pass: Zuki1202145
+Cpanel : https://app.spinartikel.com:2083/
+(di folder app.spinartikel.com)
+u: dataseoc
+p: 7#1QF?HzXm)7
+
+#index.or.id
+login admin : https://app.index.or.id/login.html
+email: admin@index.or.id
+pass: Zuki1202145
+Cpanel : https://app.index.or.id:2083
+u: indexor
+p: 7#1QF?HzXm)7
+
+#aicloud.id
+login admin : https://www.aicloud.id/login
+email: admin@aicloud.id
+pass: Zuki1202145
+Cpanel : https://aicloud.id:2083/
+(di folder aicloud.id)
+u: dataseoc
+p: 7#1QF?HzXm)7
+
+#cekserp.com
+login admin : https://app.cekserp.com/login
+email : admin@admin.com
+pass: secret
+Cpanel : https://app.cekserp.com:2083/
+u: appcekserp
+p: 7#1QF?HzXm)7
+
+#zender.id
+login admin: https://app.zender.id/admin/login
+email : admin@zender.id
+pass: Zuki1202145
+Cpanel : https://app.zender.id:2083/
+u: appzender
+p: 7#1QF?HzXm)7
+
+#autokonten.com
+login admin : https://app.autokonten.com/login
+email: admin@admin.com
+pass: secret
+Cpanel : https://app.autokonten.com:2083/
+u: appautokonten
+p: 7#1QF?HzXm)7
+
+SFeRbB6s5ZhlA0
+TCP: 8090 for CyberPanel
+TCP: 80, TCP: 443 and UDP: 443 for webserver
+TCP: 21 and TCP: 40110-40210 for FTP
+TCP: 25, TCP: 587, TCP: 465, TCP: 110, TCP: 143 and TCP: 993 for mail service
+TCP: 53 and UDP: 53 for DNS service
+Your provider seems blocked port 25 , E-mail sending may not work properly.
+
+202.10.43.28

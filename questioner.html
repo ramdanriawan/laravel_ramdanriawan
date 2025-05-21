@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrumen</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <style>
+        .custom-control-label::before {
+            left: -2.25rem;
+            height: 1.25rem;
+            width: 2.25rem;
+            pointer-events: all;
+            border-radius: 1.25rem;
+        }
+
+        .custom-control-label::after {
+            left: -2.25rem;
+            height: 1.25rem;
+            width: 1.25rem;
+            border-radius: 1.25rem;
+            background-color: #adb5bd;
+            transition: background-color 0.15s, transform 0.15s;
+        }
+
+        .custom-control-input:checked~.custom-control-label::after {
+            background-color: #007bff;
+            transform: translateX(1rem);
+        }
+
+        .custom-control-input:checked~.custom-control-label::before {
+            background-color: #007bff;
+        }
+
+        /* Custom styling for SweetAlert buttons */
+        .swal2-confirm {
+            margin-right: 10px; /* Add margin to the right */
+        }
+        .swal2-cancel {
+            margin-left: 10px; /* Add margin to the left */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="mb-4">Instrumen</h2>
+
+        <form id="questionnaireForm">
+            <table class="table table-bordered">
+                <thead class="thead-light">
+                    <tr>
+                        <th>No.</th>
+                        <th>Pertanyaan</th>
+                        <th>Sangat Tidak Setuju</th>
+                        <th>Tidak Setuju</th>
+                        <th>Netral</th>
+                        <th>Setuju</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Pertanyaan 1</td>
+                        <td>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" id="q1_0" name="question[0]" value="0">
+                                <label class="custom-control-label" for="q1_0"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" id="q1_1" name="question[0]" value="1">
+                                <label class="custom-control-label" for="q1_1"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" id="q1_2" name="question[0]" value="2">
+                                <label class="custom-control-label" for="q1_2"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" id="q1_3" name="question[0]" value="3">
+                                <label class="custom-control-label" for="q1_3"></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Pertanyaan 2</td>
+                        <td>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" id="q2_0" name="question[1]" value="0">
+                                <label class="custom-control-label" for="q2_0"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" id="q2_1" name="question[1]" value="1">
+                                <label class="custom-control-label" for="q2_1"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" id="q2_2" name="question[1]" value="2">
+                                <label class="custom-control-label" for="q2_2"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" id="q2_3" name="question[1]" value="3">
+                                <label class="custom-control-label" for="q2_3"></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Pertanyaan 3</td>
+                        <td>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" id="q3_0" name="question[2]" value="0">
+                                <label class="custom-control-label" for="q3_0"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" id="q3_1" name="question[2]" value="1">
+                                <label class="custom-control-label" for="q3_1"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" id="q3_2" name="question[2]" value="2">
+                                <label class="custom-control-label" for="q3_2"></label>
+                            </div>
+                        </td>
+                        <td>
+                            <div class="custom-control custom-switch">
+                                <input type="radio" class="custom-control-input" id="q3_3" name="question[2]" value="3">
+                                <label class="custom-control-label" for="q3_3"></label>
+                            </div>
+                        </td>
+                    </tr>
+                    <!-- Tambahkan lebih banyak pertanyaan jika diperlukan -->
+                </tbody>
+            </table>
+            <div class="text-center">
+                <button type="button" class="btn btn-primary" id="submitBtn">Kirim</button>
+                <button type="reset" class="btn btn-secondary">Atur Ulang</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            Swal.fire({
+                title: 'Konfirmasi Pengiriman',
+                text: 'Apakah Anda yakin ingin mengirim instrumen ini?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'Ya, Kirim',
+                cancelButtonText: 'Batal',
+                customClass: {
+                    confirmButton: 'btn btn-primary swal2-confirm',
+                    cancelButton: 'btn btn-secondary swal2-cancel'
+                },
+                buttonsStyling: false
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    document.getElementById('questionnaireForm').submit(); // Submit form if confirmed
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

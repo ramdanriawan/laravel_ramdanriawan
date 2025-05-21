@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instrumen</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+    <style>
+        /* Custom switch styling */
+        .custom-control {
+            margin-bottom: 0.5rem; /* Reduced margin between switches */
+        }
+
+        .custom-control-label {
+            position: relative;
+            display: block;
+            cursor: pointer;
+            padding-left: 3rem;
+            line-height: 1.5;
+        }
+
+        .custom-control-label::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            height: 1.5rem;
+            width: 2.5rem;
+            background-color: #e9ecef;
+            border-radius: 1.25rem;
+            transition: background-color 0.3s, box-shadow 0.3s;
+            box-shadow: 0 0 0 1px rgba(0,0,0,.125);
+        }
+
+        .custom-control-input:checked ~ .custom-control-label::before {
+            background-color: #007bff;
+            box-shadow: 0 0 0 1px #007bff;
+        }
+
+        .custom-control-input:checked ~ .custom-control-label::after {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: calc(100% - 1.25rem);
+            transform: translateY(-50%);
+            height: 1.25rem;
+            width: 1.25rem;
+            border-radius: 50%;
+            background-color: #fff;
+            box-shadow: 0 0 0 1px rgba(0,0,0,.125);
+            transition: transform 0.3s, background-color 0.3s;
+        }
+
+        .custom-control-input:checked ~ .custom-control-label {
+            color: #007bff;
+        }
+
+        .custom-control-label::after {
+            background-color: #fff;
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            font-weight: 600;
+        }
+
+        .text-center button {
+            margin: 0 10px;
+        }
+
+        .swal2-confirm {
+            margin-right: 10px; /* Add margin to the right */
+        }
+        .swal2-cancel {
+            margin-left: 10px; /* Add margin to the left */
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <h2 class="mb-4">Instrumen</h2>
+
+        <form id="questionnaireForm">
+            <div class="form-group">
+                <label for="q1">1. Pertanyaan 1</label>
+                <div class="custom-control custom-switch">
+                    <input type="radio" class="custom-control-input" id="q1_0" name="question[0]" value="0">
+                    <label class="custom-control-label" for="q1_0">Sangat Tidak Setuju</label>
+                </div>
+                <div class="custom-control custom-switch">
+                    <input type="radio" class="custom-control-input" id="q1_1" name="question[0]" value="1">
+                    <label class="custom-control-label" for="q1_1">Tidak Setuju</label>
+                </div>
+                <div class="custom-control custom-switch">
+                    <input type="radio" class="custom-control-input" id="q1_2" name="question[0]" value="2">
+                    <label class="custom-control-label" for="q1_2">Netral</label>
+                </div>
+                <div class="custom-control custom-switch">
+                    <input type="radio" class="custom-control-input" id="q1_3" name="question[0]" value="3">
+                    <label class="custom-control-label" for="q1_3">Setuju</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="q2">2. Pertanyaan 2</label>
+                <div class="custom-control custom-switch">
+                    <input type="radio" class="custom-control-input" id="q2_0" name="question[1]" value="0">
+                    <label class="custom-control-label" for="q2_0">Sangat Tidak Setuju</label>
+                </div>
+                <div class="custom-control custom-switch">
+                    <input type="radio" class="custom-control-input" id="q2_1" name="question[1]" value="1">
+                    <label class="custom-control-label" for="q2_1">Tidak Setuju</label>
+                </div>
+                <div class="custom-control custom-switch">
+                    <input type="radio" class="custom-control-input" id="q2_2" name="question[1]" value="2">
+                    <label class="custom-control-label" for="q2_2">Netral</label>
+                </div>
+                <div class="custom-control custom-switch">
+                    <input type="radio" class="custom-control-input" id="q2_3" name="question[1]" value="3">
+                    <label class="custom-control-label" for="q2_3">Setuju</label>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="q3">3. Pertanyaan 3</label>
+                <div class="custom-control custom-switch">
+                    <input type="radio" class="custom-control-input" id="q3_0" name="question[2]" value="0">
+                    <label class="custom-control-label" for="q3_0">Sangat Tidak Setuju</label>
+                </div>
+                <div class="custom-control custom-switch">
+                    <input type="radio" class="custom-control-input" id="q3_1" name="question[2]" value="1">
+                    <label class="custom-control-label" for="q3_1">Tidak Setuju</label>
+                </div>
+                <div class="custom-control custom-switch">
+                    <input type="radio" class="custom-control-input" id="q3_2" name="question[2]" value="2">
+                    <label class="custom-control-label" for="q3_2">Netral</label>
+                </div>
+                <div class="custom-control custom-switch">
+                    <input type="radio" class="custom-control-input" id="q3_3" name="question[2]" value="3">
+                    <label class="custom-control-label" for="q3_3">Setuju</label>
+                </div>
+            </div>
+            <!-- Tambahkan lebih banyak pertanyaan jika diperlukan -->
+            <div class="text-center mt-4">
+                <button type="button" class="btn btn-primary" id="submitBtn">Kirim</button>
+                <button type="reset" class="btn btn-secondary">Atur Ulang</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script>
+        document.getElementById('submitBtn').addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            Swal.fire({
+                title: 'Konfirmasi Pengiriman',
+                text: 'Apakah Anda yakin ingin mengirim instrumen ini?',
+                icon: 'question',
+                showCancelButton: true,
+                confirmButtonText: 'Ya, Kirim',
+                cancelButtonText: 'Batal',
+                customClass: {
+                    confirmButton: 'btn btn-primary swal2-confirm',
+                    cancelButton: 'btn btn-secondary swal2-cancel'
+                },
+                buttonsStyling: false
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    document.getElementById('questionnaireForm').submit(); // Submit form if confirmed
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>

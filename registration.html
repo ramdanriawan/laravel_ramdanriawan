@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .container {
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Form Pendaftaran</h2>
+
+        <form action="{{ route('register') }}" method="POST">
+            @csrf
+
+            <div class="form-group">
+                <label for="initialName">Inisial Nama</label>
+                <input type="text" class="form-control @error('initialName') is-invalid @enderror" id="initialName" name="initialName" value="{{ old('initialName') }}" placeholder="Masukkan inisial nama" required>
+                @error('initialName')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                <label for="motherAge">Usia Ibu</label>
+                <input type="number" class="form-control @error('motherAge') is-invalid @enderror" id="motherAge" name="motherAge" value="{{ old('motherAge') }}" placeholder="Masukkan usia ibu" required>
+                @error('motherAge')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                <label for="giveBirthTo">Melahirkan Hari Ke</label>
+                <input type="text" class="form-control @error('giveBirthTo') is-invalid @enderror" id="giveBirthTo" name="giveBirthTo" value="{{ old('giveBirthTo') }}" placeholder="Masukkan melahirkan Hari Ke" required>
+                @error('giveBirthTo')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                <label for="numberOfChildren">Jumlah Anak</label>
+                <input type="number" class="form-control @error('numberOfChildren') is-invalid @enderror" id="numberOfChildren" name="numberOfChildren" value="{{ old('numberOfChildren') }}" placeholder="Masukkan jumlah anak" required>
+                @error('numberOfChildren')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                <label for="birthWeight">Berat Badan Lahir (kg)</label>
+                <input type="number" step="0.1" class="form-control @error('birthWeight') is-invalid @enderror" id="birthWeight" name="birthWeight" value="{{ old('birthWeight') }}" placeholder="Masukkan berat badan lahir" required>
+                @error('birthWeight')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                <label for="occupation">Pekerjaan</label>
+                <input type="text" class="form-control @error('occupation') is-invalid @enderror" id="occupation" name="occupation" value="{{ old('occupation') }}" placeholder="Masukkan pekerjaan" required>
+                @error('occupation')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+
+            <div class="form-group">
+                <label for="childAge">Usia Anak</label>
+                <input type="number" class="form-control @error('childAge') is-invalid @enderror" id="childAge" name="childAge" value="{{ old('childAge') }}" placeholder="Masukkan usia anak" required>
+                @error('childAge')
+                    <div class="invalid-feedback">
+                        {{ $message }}
+                    </div>
+                @enderror
+            </div>
+
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+        </form>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
